@@ -1,0 +1,252 @@
+/* Estilos CSS para el menú */
+
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Agregando color de fondo*/
+body{
+    background-color:rgba(182, 180, 180, 0.966);
+}
+.index{
+    background-color: rgba(247, 243, 243, 0.966);
+}
+.acerca-de{
+    background-color: rgba(247, 243, 243, 0.966);
+    
+}
+main{
+    margin: 1% 0 1% 0;
+}
+
+/*
+-----------------------------------------------------
+            Estilos para el INDEX
+-----------------------------------------------------
+*/
+
+/*Modificacion Header*/
+header nav div h1{
+    display: inline-block;
+    width: 10%;
+    
+}
+header nav div h1 .empresa-logo{
+    width: 100%;
+    object-fit: cover;
+}
+
+/*Estilos de Main Index*/
+.index{ 
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 10% 40% 10% 20% 20%;
+    margin: 0 5% 0 5%;
+    align-content: center;   
+    border-radius: 2%;
+    border-style: solid;
+    border-color: white;
+}
+.index .grid-item{
+    display: none;
+}
+.index div a .ofertas{
+    border-radius: 25%;
+}
+.index div a .img1{
+    border-style: solid;
+    border-color: white;
+    border-radius: 30% 0 0 0;
+}
+.index div a .img2{
+    border-style: solid;
+    border-color: white;
+    border-radius: 0 30% 0 0;
+}
+.index div a .img3{
+    border-style: solid;
+    border-color: white;
+    border-radius: 0 0 0 30%;
+}
+main div a .img4{
+    border-style: solid;
+    border-color: white;
+    border-radius: 0 0 30% 0;
+}
+.index div a img{
+    width: 100%;
+    object-fit: fill;
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: 100%; /* Ajusta la altura de las imágenes para que se ajusten a las filas */
+}
+
+.categorias{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.index div h2{
+    text-align: center;
+    display: inline-block;
+    border-style: solid;
+    background-color:  rgba(219, 219, 219, 0.966);
+    color: white;
+    border-radius: 45%;
+    font-size: 1rem;
+    padding: 10px;
+}
+.index .descuentos{
+    grid-column: 2 span;
+}
+.index .categorias{
+    grid-column: 2 span;
+}
+
+/*Estilos de Footer*/
+footer{
+    background-color: rgba(248, 248, 248, 0.616);
+    text-align: center;
+    color:gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    flex-wrap: wrap;
+}
+footer ul{
+    list-style: none;
+    margin-right: 35px;
+
+}
+
+/*Estilos Tablet*/
+
+@media screen and (min-width: 600px) {
+    .index{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 10% 30% 10% 20% 20%;
+        padding: 0 0 10px 0;
+        align-content: center;   
+    }
+    .index .categorias{
+        grid-column: 4 span;
+    }
+    .index .grid-item{
+        display: block;
+    }
+}
+
+/* mq de desktop*/
+
+@media screen and (min-width: 1024px) {
+    .index{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 9% 32% 9% 25% 25%;
+        padding: 0 15% 10px 15%;
+        align-content: center;   
+    }
+    .index .categorias{
+        grid-column: 4 span;
+    }
+    .index .grid-item{
+        display: block;
+    }
+}
+/*
+-----------------------------------------------------
+            Estilos para el Acerca de
+-----------------------------------------------------
+*/
+
+.acerca-de{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 15% 35% 30%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: white;
+    margin: 0 5% 0 5%;
+    gap: 1%;
+}
+.acerca-de .titulo-acerca-de{
+    grid-column: 3 span;
+}
+.detalle-acerca-de{
+    grid-column:  3 span;
+    justify-content: center;
+}
+
+
+.acerca-de .maps iframe{
+max-width: 100%;
+height: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .acerca-de{
+        height: 90vh;
+        grid-template-rows: 10% 25% 45%;
+    }
+    .acerca-de .maps iframe{
+        height: 250px
+        }
+}
+@media screen and (min-width: 1024px) {
+
+}
+/*
+-----------------------------------------------------
+            Estilos para compra de articulo
+-----------------------------------------------------
+*/
+/*Estilos Main*/
+
+
+.main-articulos .contenedor-articulo{
+    size: 70;
+    display: grid;
+    grid-template-rows: 40% 30%;
+    justify-content: space-between;
+    margin: 0 20% 0 20%;
+    background-color: white;
+    border-style: solid;
+    border-radius: 2%;
+}
+.main-articulos .contenedor-articulo div img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    border-radius: 2%;
+}
+.main-articulos .contenedor-articulo .grid-item{
+    display: none;
+}
+@media screen and (min-width: 600px) {
+    .main-articulos .contenedor-articulo{
+        height: 80vh;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 70% 30%;
+    }
+    .main-articulos .contenedor-articulo .grid-item{
+        display: block;
+    }
+    .main-articulos .contenedor-articulo .texto{
+        grid-row: 2 span;
+
+    }
+
+}
+
